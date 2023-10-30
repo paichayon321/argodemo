@@ -14,7 +14,3 @@ spec:
   tls:
     termination: edge
   wildcardPolicy: None
-  alternateBackends:
-    kind: Service
-    name: httpd-frontend-new
-    weight: 20
