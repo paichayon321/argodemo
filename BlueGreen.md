@@ -27,7 +27,8 @@ git clone https://github.com/paichayon321/argodemo.git
 
    5. Update new image version in deployment.yaml
    ```
-   yq -i '.spec.template.spec.containers[0].image = "registry.redhat.io/rhel8/httpd-24"' argodemo/env/test/deployment-new.yaml
+   #yq -i '.spec.template.spec.containers[0].image = "registry.redhat.io/rhel8/httpd-24"' argodemo/env/test/deployment-new.yaml
+   yq -i '.spec.template.spec.containers[0].image = "ghcr.io/rhobs/prometheus-example-app:0.4.1"' argodemo/env/test/deployment-new.yaml
    ```
    
 
