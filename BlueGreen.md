@@ -1,7 +1,7 @@
 # Openshift Blue/Green Deployment with ArgoCD and Kustomize
 git clone https://github.com/paichayon321/argodemo.git
 
-1. Checkout Git and Copy Current version of Deployment.yaml and Service.yaml to New Version Deployment-new.yaml and Service-new.yaml
+   1. Checkout Git and Copy Current version of Deployment.yaml and Service.yaml to New Version Deployment-new.yaml and Service-new.yaml
    
    ```
    git clone https://github.com/paichayon321/argodemo.git
@@ -9,13 +9,12 @@ git clone https://github.com/paichayon321/argodemo.git
    cp argodemo/env/test/service.yaml argodemo/env/test/service-new.yaml
    ```
    
-3. Change label and name on deployment-new.yaml
-   
+   2. Change label and name on deployment-new.yaml
    ```
-  yq -i '.metadata.name = "httpd-frontend-new"' argodemo/env/test/deployment-new.yaml
-  yq -i '.metadata.labels.app = "httpd-frontend-new"' argodemo/env/test/deployment-new.yaml
-  yq -i '.spec.selector.matchLabels.app = "httpd-frontend-new"' argodemo/env/test/deployment-new.yaml
-  yq -i '.spec.template.metadata.labels.app = "httpd-frontend-new"' argodemo/env/test/deployment-new.yaml
+   yq -i '.metadata.name = "httpd-frontend-new"' argodemo/env/test/deployment-new.yaml
+   yq -i '.metadata.labels.app = "httpd-frontend-new"' argodemo/env/test/deployment-new.yaml
+   yq -i '.spec.selector.matchLabels.app = "httpd-frontend-new"' argodemo/env/test/deployment-new.yaml
+   yq -i '.spec.template.metadata.labels.app = "httpd-frontend-new"' argodemo/env/test/deployment-new.yaml
    ```
 
 4. Change label and name on service-new.yaml
