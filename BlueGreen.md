@@ -36,14 +36,6 @@ git clone https://github.com/paichayon321/argodemo.git
    yq -i '.spec.to.weight = 90' argodemo/env/test/route.yaml
    yq -i '.spec.alternateBackends = [{"kind": "Service", "name": "httpd-frontend-new", "weight": 10}]' argodemo/env/test/route.yaml
 
-
-   yq -i '.spec.to.weight = 80' argodemo/env/test/route.yaml
-   yq -i '.spec.alternateBackends = [{"kind": "Service", "name": "httpd-frontend-new", "weight": 20}]' argodemo/env/test/route.yaml
-
-
-   yq -i '.spec.to.weight = 50' argodemo/env/test/route.yaml
-   yq -i '.spec.alternateBackends = [{"kind": "Service", "name": "httpd-frontend-new", "weight": 50}]' argodemo/env/test/route.yaml
-
    ```
    
 
@@ -59,12 +51,20 @@ git clone https://github.com/paichayon321/argodemo.git
 # Switch Traffice 20:80
 1. Checkout Git
 2. Modify route.yaml for incress weight to new version 20:80
-3. Push update to Git
+   ```
+   yq -i '.spec.to.weight = 80' argodemo/env/test/route.yaml
+   yq -i '.spec.alternateBackends = [{"kind": "Service", "name": "httpd-frontend-new", "weight": 20}]' argodemo/env/test/route.yaml
+   ```
+4. Push update to Git
 
 # Switch Traffice 50:50
 1. Checkout Git
-2. Modify route.yaml for incress weight to new version 50:50
-3. Push update to Git
+   ```
+   yq -i '.spec.to.weight = 50' argodemo/env/test/route.yaml
+   yq -i '.spec.alternateBackends = [{"kind": "Service", "name": "httpd-frontend-new", "weight": 50}]' argodemo/env/test/route.yaml
+   ```   
+3. Modify route.yaml for incress weight to new version 50:50
+4. Push update to Git
 
 # Switch Traffice 0:100
 1. Checkout Git
