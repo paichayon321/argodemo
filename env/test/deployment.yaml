@@ -16,7 +16,7 @@ spec:
         app: httpd-frontend
     spec:
       containers:
-        - image: registry.redhat.io/rhel8/httpd-25
+        - image: registry.redhat.io/rhel8/httpd-24
           imagePullPolicy: Always
           name: httpd-rhel7
           ports:
