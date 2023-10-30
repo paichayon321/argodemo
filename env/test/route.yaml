@@ -8,7 +8,7 @@ spec:
   to:
     kind: Service
     name: httpd-frontend-http-port
-    weight: 80
+    weight: 50
   port:
     targetPort: http-port
   tls:
@@ -17,4 +17,4 @@ spec:
   alternateBackends:
     - kind: Service
       name: httpd-frontend-new
-      weight: 10
+      weight: 50
