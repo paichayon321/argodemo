@@ -25,18 +25,18 @@ git clone https://github.com/paichayon321/argodemo.git
    yq -i '.spec.selector.app = "httpd-frontend-new"' argodemo/env/test/service-new.yaml
    ```
 
-5. Update new image version in deployment.yaml
+   5. Update new image version in deployment.yaml
    ```
 
    ```
    
 
-6. Modify route.yaml for incress weight to new version 10:90
+   6. Modify route.yaml for incress weight to new version 10:90
    ```
 
    ```
 
-7. Push update to Git
+   7. Push update to Git
 
 
 # Switch Traffice 20:80
