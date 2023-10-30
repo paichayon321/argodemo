@@ -8,9 +8,13 @@ spec:
   to:
     kind: Service
     name: httpd-frontend-http-port
-    weight: 90
+    weight: 80
   port:
     targetPort: http-port
   tls:
     termination: edge
   wildcardPolicy: None
+  alternateBackends:
+    kind: Service
+    name: httpd-frontend-new
+    weight: 20
