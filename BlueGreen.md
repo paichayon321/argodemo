@@ -1,8 +1,11 @@
 # Openshift Blue/Green Deployment with ArgoCD and Kustomize
+git clone https://github.com/paichayon321/argodemo.git
+
 1. Checkout Git and Copy Current version of Deployment.yaml and Service.yaml to New Version Deployment-new.yaml and Service-new.yaml
    ```
-   cp deployment.yaml deployment-new.yaml
-   cp service.yaml service-new.yaml
+   git clone https://github.com/paichayon321/argodemo.git
+   cp argodemo/env/test/deployment.yaml argodemo/env/test/deployment-new.yaml
+   cp argodemo/env/test/service.yaml argodemo/env/test/service-new.yaml
    ```
 2. Change label and name on deployment-new.yaml
 3. Change label and name on service-new.yaml
