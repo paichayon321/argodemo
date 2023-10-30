@@ -33,10 +33,18 @@ git clone https://github.com/paichayon321/argodemo.git
 
    6. Modify route.yaml for incress weight to new version 10:90
    ```
-
+   yq -i '.spec.to.weight = 90' argodemo/env/test/route.yaml
+   yq -i '.spec.alternateBackends.name = "httpd-frontend-new"' argodemo/env/test/route.yaml
+   yq -i '.spec.alternateBackends.weight = 10' argodemo/env/test/route.yaml
    ```
 
    7. Push update to Git
+   ```
+   git add .
+   git commit -m "Update BlueGreen"
+   git push
+   ```
+      
 
 
 # Switch Traffice 20:80
