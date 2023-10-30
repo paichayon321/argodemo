@@ -12,10 +12,10 @@ git clone https://github.com/paichayon321/argodemo.git
 3. Change label and name on deployment-new.yaml
    
    ```
-yq -i '.metadata.name = "httpd-frontend-new"' argodemo/env/test/deployment-new.yaml
-yq -i '.metadata.labels.app = "httpd-frontend-new"' argodemo/env/test/deployment-new.yaml
-yq -i '.spec.selector.matchLabels.app = "httpd-frontend-new"' argodemo/env/test/deployment-new.yaml
-yq -i '.spec.template.metadata.labels.app = "httpd-frontend-new"' argodemo/env/test/deployment-new.yaml
+  yq -i '.metadata.name = "httpd-frontend-new"' argodemo/env/test/deployment-new.yaml
+  yq -i '.metadata.labels.app = "httpd-frontend-new"' argodemo/env/test/deployment-new.yaml
+  yq -i '.spec.selector.matchLabels.app = "httpd-frontend-new"' argodemo/env/test/deployment-new.yaml
+  yq -i '.spec.template.metadata.labels.app = "httpd-frontend-new"' argodemo/env/test/deployment-new.yaml
    ```
 
 4. Change label and name on service-new.yaml
