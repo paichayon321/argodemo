@@ -17,19 +17,24 @@ git clone https://github.com/paichayon321/argodemo.git
    yq -i '.spec.template.metadata.labels.app = "httpd-frontend-new"' argodemo/env/test/deployment-new.yaml
    ```
 
-4. Change label and name on service-new.yaml
+   3. Change label and name on service-new.yaml
 
    ```
-yq -i '.metadata.name = "httpd-frontend-new"' argodemo/env/test/service-new.yaml
-yq -i '.metadata.labels.app = "httpd-frontend-new"' argodemo/env/test/service-new.yaml
-yq -i '.spec.selector.app = "httpd-frontend-new"' argodemo/env/test/service-new.yaml
+   yq -i '.metadata.name = "httpd-frontend-new"' argodemo/env/test/service-new.yaml
+   yq -i '.metadata.labels.app = "httpd-frontend-new"' argodemo/env/test/service-new.yaml 
+   yq -i '.spec.selector.app = "httpd-frontend-new"' argodemo/env/test/service-new.yaml
    ```
 
 5. Update new image version in deployment.yaml
+   ```
 
+   ```
+   
 
 6. Modify route.yaml for incress weight to new version 10:90
+   ```
 
+   ```
 
 7. Push update to Git
 
