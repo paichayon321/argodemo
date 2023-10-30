@@ -16,7 +16,7 @@ spec:
         app: httpd-frontend
     spec:
       containers:
-        - image: registry.redhat.io/rhel8/httpd-24
+        - image: ghcr.io/rhobs/prometheus-example-app:0.4.1
           imagePullPolicy: Always
           name: httpd-rhel7
           ports:
