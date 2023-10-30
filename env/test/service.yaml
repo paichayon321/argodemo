@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: httpd-frontend-http-port
+  name: httpd-frontend
   labels:
     app: httpd-frontend
 spec:

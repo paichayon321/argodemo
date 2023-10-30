@@ -16,11 +16,11 @@ spec:
         app: httpd-frontend
     spec:
       containers:
-      - image: registry.redhat.io/rhel8/httpd-24
-        imagePullPolicy: Always
-        name: httpd-rhel7
-        ports:
-        - containerPort: 8080
-          name: http-port
-        - containerPort: 8443
-          name: https-port
+        - image: registry.redhat.io/rhel8/httpd-24
+          imagePullPolicy: Always
+          name: httpd-rhel7
+          ports:
+            - containerPort: 8080
+              name: http-port
+            - containerPort: 8443
+              name: https-port
