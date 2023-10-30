@@ -1,4 +1,4 @@
-# Openshift Blue/Green Deployment with ArgoCD and Kustomize
+# Openshift Blue/Green Deployment with ArgoCD
 git clone https://github.com/paichayon321/argodemo.git
 
    1. Checkout Git and Copy Current version of Deployment.yaml and Service.yaml to New Version Deployment-new.yaml and Service-new.yaml
