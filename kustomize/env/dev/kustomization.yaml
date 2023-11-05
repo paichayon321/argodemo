@@ -15,6 +15,9 @@ configMapGenerator:
     envs:
       # configfile is used as key
       - env.config
+  - name: sealed-secret-trigger
+    files:
+      - sealed-mysecret.yaml
 
 configurations:
   - configuration/sealed-secret-config.yaml
@@ -27,3 +30,4 @@ generatorOptions:
 # generate empty secrets to provide hashed names for pod specs
 secretGenerator:
   - name: mysecret
+    type: Opaque
