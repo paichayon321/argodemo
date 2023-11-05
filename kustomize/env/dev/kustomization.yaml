@@ -12,6 +12,7 @@ resources:
 patchesStrategicMerge:
 - deployment.yaml
 
+# ConfigMapGenerator --> When configmap change, it's will force pod redeploy
 configMapGenerator:
   - name: myconfig
     envs:
