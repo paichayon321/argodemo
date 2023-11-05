@@ -14,7 +14,7 @@ configMapGenerator:
     envs:
       # configfile is used as key
       - env.config
-  - name: mysecret
+  - name: mysecretconfig
     files:
       - sealed-mysecret.yaml
 

@@ -30,7 +30,7 @@ spec:
             - secretRef:
                 name: mysecret
             - configMapRef:
-                name: mysecret
+                name: mysecretconfig
 
 
 
