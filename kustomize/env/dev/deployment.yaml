@@ -29,5 +29,11 @@ spec:
                 name: myconfig
             - configMapRef:
                 name: sealed-secret-trigger
+          env:
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: db-password
+                  key: password
 
       
