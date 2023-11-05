@@ -3,6 +3,6 @@ kind: Kustomization
 bases:
 - ../../base
 patchesStrategicMerge:
-- depoyment.yaml
+- deployment.yaml
 - hpa.yaml
 - route.yaml
