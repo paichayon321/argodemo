@@ -24,3 +24,8 @@ spec:
               name: http-port
             - containerPort: 8443
               name: https-port
+          envFrom:
+            - configMapRef:
+                name: myconfig
+
+      
