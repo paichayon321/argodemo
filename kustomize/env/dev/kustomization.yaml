@@ -16,7 +16,7 @@ configMapGenerator:
       - env.config
   - name: mysecret
     files:
-      - sealed-mysecret.yaml
+    - sealed-mysecret.yaml
 
 
 
