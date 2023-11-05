@@ -15,27 +15,27 @@ configMapGenerator:
     envs:
       # configfile is used as key
       - env.config
-  - name: sealed-secret-trigger
+  - name: mysecret
     files:
       - sealed-mysecret.yaml
 
 
 
 # generate empty secrets to provide hashed names for pod specs
-secretGenerator:
-  - name: mysecret
-    type: Opaque
-  - name: db-password
-    literals:
-      - password=1234
+#secretGenerator:
+#  - name: mysecret
+#    type: Opaque
+#  - name: db-password
+#    literals:
+#      - password=1234
 
 
-generatorOptions:
-  annotations:
-    sealedsecrets.bitnami.com/managed: "true"
-    sealedsecrets.bitnami.com/namespace-wide: "true"
-  labels:
-    currently-used-by-kustomize: "true"
+#generatorOptions:
+#  annotations:
+#    sealedsecrets.bitnami.com/managed: "true"
+#    sealedsecrets.bitnami.com/namespace-wide: "true"
+#  labels:
+#    currently-used-by-kustomize: "true"
 
 configurations:
   - configuration/sealed-secret-config.yaml
