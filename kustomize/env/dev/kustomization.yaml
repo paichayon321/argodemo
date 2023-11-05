@@ -26,4 +26,3 @@ configurations:
 
 secretGenerator:
   - name: mysecret
-    type: Opaque
