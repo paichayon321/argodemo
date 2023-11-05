@@ -25,6 +25,10 @@ configMapGenerator:
 secretGenerator:
   - name: mysecret
     type: Opaque
+  - name: db-password
+    literals:
+      - password=1234
+
 
 generatorOptions:
   annotations:
