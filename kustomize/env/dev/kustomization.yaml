@@ -5,6 +5,7 @@ bases:
 resources:
   - hpa.yaml
   - route.yaml
+  - configmap.yaml
 patchesStrategicMerge:
 - deployment.yaml
 
