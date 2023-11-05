@@ -5,7 +5,6 @@ bases:
 resources:
   - hpa.yaml
   - route.yaml
-  - sealed-mysecret.yaml
 
 patchesStrategicMerge:
 - deployment.yaml
