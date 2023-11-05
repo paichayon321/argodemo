@@ -7,7 +7,7 @@ spec:
     kind: Deployment
     name: httpd-frontend
     apiVersion: apps/v1
-  minReplicas: 4
+  minReplicas: 1
   maxReplicas: 5
   metrics:
     - type: Resource
