@@ -25,5 +25,5 @@ configurations:
 #    sealedsecrets.bitnami.com/namespace-wide: "true"
 
 secretGenerator:
-  - name: sample-secret
+  - name: mysecret
     type: Opaque
