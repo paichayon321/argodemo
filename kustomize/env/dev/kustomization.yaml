@@ -15,9 +15,11 @@ configMapGenerator:
     envs:
       # configfile is used as key
       - env.config
-#  - name: mysecretconfig
-#    files:
-#      - sealed-mysecret.yaml
+  - name: mysecretconfig
+    files:
+      - sealed-mysecret.yaml
+
+
 
 
 
@@ -37,5 +39,5 @@ configMapGenerator:
 #  labels:
 #    currently-used-by-kustomize: "true"
 
-configurations:
-  - configuration/sealed-secret-config.yaml
+#configurations:
+#  - configuration/sealed-secret-config.yaml
