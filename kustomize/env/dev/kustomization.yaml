@@ -19,15 +19,19 @@ configMapGenerator:
     files:
       - sealed-mysecret.yaml
 
-configurations:
-  - configuration/sealed-secret-config.yaml
 
-generatorOptions:
-  annotations:
-    sealedsecrets.bitnami.com/managed: "true"
-    sealedsecrets.bitnami.com/namespace-wide: "true"
 
 # generate empty secrets to provide hashed names for pod specs
 secretGenerator:
   - name: mysecret
     type: Opaque
+
+generatorOptions:
+  annotations:
+    sealedsecrets.bitnami.com/managed: "true"
+    sealedsecrets.bitnami.com/namespace-wide: "true"
+  labels:
+    currently-used-by-kustomize: "true"
+
+configurations:
+  - configuration/sealed-secret-config.yaml
