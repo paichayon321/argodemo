@@ -24,5 +24,6 @@ configurations:
 #    sealedsecrets.bitnami.com/managed: "true"
 #    sealedsecrets.bitnami.com/namespace-wide: "true"
 
+# generate empty secrets to provide hashed names for pod specs
 secretGenerator:
   - name: mysecret
