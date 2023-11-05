@@ -7,7 +7,6 @@ resources:
   - route.yaml
   - sealed-mysecret.yaml
 
-
 patchesStrategicMerge:
 - deployment.yaml
 
@@ -17,3 +16,14 @@ configMapGenerator:
       # configfile is used as key
       - env.config
 
+configurations:
+  - configuration/sealed-secret-config.yaml
+
+#generatorOptions:
+#  annotations:
+#    sealedsecrets.bitnami.com/managed: "true"
+#    sealedsecrets.bitnami.com/namespace-wide: "true"
+
+secretGenerator:
+  - name: sample-secret
+    type: Opaque
