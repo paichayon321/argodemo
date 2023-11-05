@@ -5,6 +5,7 @@ bases:
 resources:
   - hpa.yaml
   - route.yaml
+# Resource include sealed secret yaml file
   - sealed-mysecret.yaml
   - sealed-mysecret2.yaml
 
@@ -15,7 +16,7 @@ configMapGenerator:
   - name: myconfig
     envs:
       - env.config
-# on deployment reference both secret and configmap
+# Add sealed secret file to configmap and at deployment reference both secret name and configmap
   - name: mysecretconfig
     files:
       - sealed-mysecret.yaml
