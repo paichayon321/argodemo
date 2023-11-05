@@ -29,6 +29,8 @@ spec:
                 name: myconfig
             - secretRef:
                 name: mysecret
+            - secretRef:
+                name: mysecret2
             - configMapRef:
                 name: mysecretconfig
 

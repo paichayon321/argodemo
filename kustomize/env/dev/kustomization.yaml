@@ -6,6 +6,7 @@ resources:
   - hpa.yaml
   - route.yaml
   - sealed-mysecret.yaml
+  - sealed-mysecret2.yaml
 
 patchesStrategicMerge:
 - deployment.yaml
@@ -13,8 +14,9 @@ patchesStrategicMerge:
 configMapGenerator:
   - name: myconfig
     envs:
-      # configfile is used as key
       - env.config
+# on deployment reference both secret and configmap
   - name: mysecretconfig
     files:
       - sealed-mysecret.yaml
+      - sealed-mysecret2.yaml
